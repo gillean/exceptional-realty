@@ -3,11 +3,27 @@
 
 /*////////// GLOBAL //////////*/
 
-h3 {
+body {
+  font-size: 100%;
+}
+
+h3, h4 {
   margin: 0 0 10px;
 }
 
-p { 
+h4 {
+  font-weight: normal;
+}
+
+ul, ol {
+  margin-bottom: 10px;
+}
+
+li {
+  margin-left: 20px;
+}
+
+p, address { 
   font-size: 1em; /* 16px, ?pt, 100%, 1em */
   line-height: 1.5em;
 }
@@ -20,6 +36,81 @@ figcaption {
   font: normal 0.75em/1.5em 'Elsie Swash Caps', cursive;
   color: #777;
   text-align: right;
+}
+
+table {
+  margin: 0 0 20px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+  background: #efefef;
+}
+
+th, td {
+  padding: 10px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background: #555;
+  color: white;
+  cursor: pointer;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  box-shadow: 0 3px 5px #ccc;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  margin-top: 5px;
+  width: 100px;
+  background: black;
+  color: white;
+  border-radius: 25px;
+  border: 0;
+}
+
+input[type="submit"]:hover {
+  background: #555;
+}
+
+input.error, textarea.error {
+  border: 1px solid red;
+}
+
+span.error {
+  display: none;
+  color: red;
+}
+
+input.verify-box {
+  display: inline-block;
+  width: 78%;
+  margin-right: 2%;
+}
+
+img.verify-img {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  vertical-align: bottom;
+  margin-bottom: 3px;
+}
+
+iframe {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 406px;
 }
 
 .milk-text {
@@ -43,6 +134,10 @@ figcaption {
   padding-right: 30px;
 }
 
+.new {
+  color: #ccc;
+  text-shadow: 0 2px 0 #000;
+}
 
 /*////////// BACKGROUNDS //////////*/
 
@@ -147,6 +242,7 @@ img, video, audio, iframe, table, form {
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 .col-3 {
   
 =======
@@ -156,6 +252,18 @@ img, video, audio, iframe, table, form {
 .col-3 {
 
 >>>>>>> social-icons
+=======
+.col-3 p {
+  -moz-column-rule: 1px dotted #ccc;
+  -webkit-column-rule: 1px dotted #ccc;
+  column-rule: 1px dotted #ccc;
+  -moz-column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  column-gap: 1.5em;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+>>>>>>> 9d4b3f76a89034c508dbdcbb5a6bbb11f10fff91
 }
 
 [class*="col-"] {
@@ -166,22 +274,44 @@ img, video, audio, iframe, table, form {
   margin-left: 0%;
 }
 
+.right {
+  float: right;
+}
+
 /*/////// SOCIAL ////////*/
 
 #social {
   position: fixed;
-  top: 185px;
+  top: 163px;
   right: 20px;
   width: 40px;
-  z-index: 1;
+  z-index: 2;
 }
 
 #social a {
   display: block;
   width: 40px;
   height: 40px;
-  background: yellow;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
+
+a.fbook, a.twit, a.gplus {
+  background: url(../images/social-icons.png) no-repeat;
+}
+
+a.fbook { background-position: 0 0; }
+a.fbook:hover { background-position: -40px 0; }
+a.fbook:active { background-position: -80px 0; }
+
+a.twit { background-position: 0 -40px; }
+a.twit:hover { background-position: -40px -40px; }
+a.twit:active { background-position: -80px -40px; }
+
+a.gplus { background-position: 0 -80px; }
+a.gplus:hover { background-position: -40px -80px; }
+a.gplus:active { background-position: -80px -80px; }
 
 /*////////// HEADER //////////*/
 <<<<<<< HEAD
@@ -291,20 +421,36 @@ border-bottom: 1px solid #ccc;
 >>>>>>> social-icons
 }
 
+#navbar nav a.menu-icon {
+  display: none;
+}
+
 /*////////// LOGO //////////*/
 
 #logo {
-  padding: 84px 0 0;
+  padding: 74px 0 0;
 }
 
 #logo h1 {
-  font-family: 'Clicker Script', cursive;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   margin: 0;
+  background: url(../images/exceptional-logo.png) no-repeat;
+  background-size: 100% 100%;
 }
 
 #logo h2 {
-  font-family: 'Elsie Swash Caps', cursive;
+  display: inline-block;
+  font: 2.5em "Clicker Script", cursive;
   margin: 0;
+  position: relative;
+  top: -9px;
+  left: 5px;
+  color: #303;
 }
 
 /*////////// MAIN SECTIONS //////////*/
